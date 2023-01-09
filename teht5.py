@@ -10,6 +10,7 @@ leiviskaPaino = 20 * naulaPaino
 
 kokonaisPaino= (leiviskaPaino*leiviska) + (naulaPaino*naulat) + (luotiPaino*luodit)
 painoKilo = kokonaisPaino/1000
+painoGram =
 
 
 print('Massa nykymittojen mukaan: ' +str(math.floor(painoKilo))+ ' kilogrammaa')
