@@ -1,3 +1,3 @@
 from math import pi
-sade = float(input('Anna ympyrän säde: '))
-print('Ympyrän pinta-ala on ' +str(pi*sade**2))
+r = float(input('Anna ympyrän säde: '))
+print('Ympyrän pinta-ala on ' +str(pi*r**2))
