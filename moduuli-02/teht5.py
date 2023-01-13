@@ -11,7 +11,8 @@ leiviskaPaino = 20 * naulaPaino
 kokonaisPaino = (leiviskaPaino*leiviska) + (naulaPaino*naulat) + (luotiPaino*luodit)
 painoKilo = kokonaisPaino/1000
 painoGram = kokonaisPaino - (math.floor(painoKilo)*1000)
+painoGram2 = "%.2f" % painoGram
 
 
 
-print('Massa nykymittojen mukaan: ' +str(math.floor(painoKilo))+ ' kilogrammaa ja ' +str(math.floor(painoGram))+ ' grammaa')
+print('Massa nykymittojen mukaan: ' +str(math.floor(painoKilo))+ ' kilogrammaa ja ' +str(painoGram2)+ ' grammaa')
