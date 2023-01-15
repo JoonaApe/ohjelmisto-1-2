@@ -1,3 +1,4 @@
-from math import pi
+import math
 r = float(input('Anna ympyrän säde: '))
-print('Ympyrän pinta-ala on ' +str(pi*r**2))
+area = math.pi*r**2
+print(f'Ympyrän pinta-ala on  {area:.2f}')
