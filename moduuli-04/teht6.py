@@ -1,5 +1,5 @@
 '''
-pii vittusaatana tehtävä
+pii tehtävä
 '''
 import random
 
