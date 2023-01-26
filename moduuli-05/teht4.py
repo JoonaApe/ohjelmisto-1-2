@@ -6,7 +6,6 @@ käytä for-toistorakennetta nimien kysymiseen ja for/in toistorakennetta niiden
 '''
 
 kaupungit = []
-count = 0
 
 for i in range(5):
     kaupunki = input('Anna kaupunki. ')
