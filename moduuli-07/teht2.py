@@ -19,7 +19,7 @@ while True:
     else:
         print("uusi nimi")
         nimet.add(nimi)
-print('Nimet: ')
+print('Nimet:\n ')
 
 for nimi in nimet:
     print(nimi)
