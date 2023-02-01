@@ -9,5 +9,6 @@ def summa(lista):
 
 
 
-numerot = [10,12,23,512,22,31,2,4123,21]
-print(summa(numerot))
+numerot = [10,12,23,512,22,31,2,413]
+print(numerot)
+print(f'Yllä olevien numeroiden summa: {summa(numerot)}')
