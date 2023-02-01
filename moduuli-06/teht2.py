@@ -8,14 +8,13 @@ Edellisestä tehtävästä poiketen nopan heittelyä jatketaan pääohjelmassa k
 import random
 
 def nopat(tahkot):
-    x = random.randint(1,tahkot)
-    return x
+    return random.randint(1,tahkot)
+
+
 numerot = int(input('Anna tahkojen määrä. '))
-
-game_on = True
-while game_on:
-    print(nopat(numerot))
-    if numerot == nopat(numerot):
-        print(f'{numerot} Sait nopan suurimman numeron!')
-        game_on = False
-
+while True:
+        luku = nopat(numerot)
+        print(f'nopasta tuli: {luku}')
+        if numerot == luku:
+            print(f'\nSait nopan suurimman numeron!')
+            break
