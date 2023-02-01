@@ -21,11 +21,12 @@ halkaisija2 = float(input('Anna toisen pizzan halkaisija: '))
 hinta2 = float(input('Anna toisen pizzan hinta: '))
 yksikko_hinta2 = pizza_kone(halkaisija2,hinta2)
 
+
 if yksikko_hinta1 < yksikko_hinta2:
     print(f'Ensimmäinen pizza antaa paremman vastineen rahoille, sen hinta on {yksikko_hinta1:.2f} euroa per neliömetri, toisen pizzan hinta on {yksikko_hinta2:.2f} euroa per neliömetri')
 
 elif yksikko_hinta1 > yksikko_hinta2:
-    print(f'Toinen pizza antaa paremman vastineen rahoille, sen hinta on {yksikko_hinta2:.2f} euroa per neliö metri, ensimmäisen pizzan hinta on {yksikko_hinta1:.2f} euroa per neliömetri')
+    print(f'Toinen pizza antaa paremman vastineen rahoille, sen hinta on {yksikko_hinta2:.2f} euroa per neliömetri, ensimmäisen pizzan hinta on {yksikko_hinta1:.2f} euroa per neliömetri')
 else:
     print('Pizzat ovat yhtä hyviä vastineita rahoille.')
 
