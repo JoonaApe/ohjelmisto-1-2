@@ -1,4 +1,4 @@
-import math
+
 
 leiviska = int(input('Anna leiviskät '))
 naulat = int(input('Anna naulat '))
@@ -9,8 +9,8 @@ naulaPaino = 32 * luotiPaino
 leiviskaPaino = 20 * naulaPaino
 
 kokonaisPaino = (leiviskaPaino*leiviska) + (naulaPaino*naulat) + (luotiPaino*luodit)
-painoKilo = math.floor(kokonaisPaino/1000)
-painoGram = kokonaisPaino - (math.floor(painoKilo)*1000)
+painoKilo = kokonaisPaino // 1000
+painoGram = kokonaisPaino - painoKilo*1000
 
 
-print(f'Massa nykymittojen mukaan: {painoKilo} kilogrammaa ja {painoGram:.2f} grammaa')
+print(f'Massa nykymittojen mukaan: {painoKilo:.0f} kilogrammaa ja {painoGram:.2f} grammaa')

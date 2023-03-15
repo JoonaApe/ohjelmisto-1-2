@@ -18,3 +18,4 @@ def parilliset_luvut(lista_parametri):
 numerot = [1,213,4,21,51,12,5,520,8,6]
 print(f'alkuperäinen lista: {numerot}')
 print(f'karsittu lista: {parilliset_luvut(numerot)}')
+
