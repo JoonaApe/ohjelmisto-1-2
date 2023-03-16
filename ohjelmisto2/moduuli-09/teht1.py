@@ -1,4 +1,10 @@
-import random
+'''
+Kirjoita Auto-luokka, jonka ominaisuuksina ovat rekisteritunnus, huippunopeus, tämänhetkinen nopeus ja kuljettu matka.
+Kirjoita luokkaan alustaja, joka asettaa ominaisuuksista kaksi ensin mainittua parametreina saatuihin arvoihin.
+Uuden auton nopeus ja kuljetut matka on asetettava automaattisesti nollaksi.
+Kirjoita pääohjelma, jossa luot uuden auton (rekisteritunnus ABC-123, huippunopeus 142 km/h).
+Tulosta pääohjelmassa sen jälkeen luodun auton kaikki ominaisuudet.
+'''
 
 class Auto:
     def __init__(self, rekkari, topSpeed , currentSpeed = 0, trip = 0):
@@ -6,56 +12,6 @@ class Auto:
         self.topSpeed = topSpeed
         self.currentSpeed = currentSpeed
         self.trip = trip
-    def accelerate(self, speedDifference):
-        auto.currentSpeed = auto.currentSpeed + speedDifference
-        if auto.currentSpeed > auto.topSpeed:
-            auto.currentSpeed = auto.topSpeed
-        if auto.currentSpeed < 0:
-            auto.currentSpeed = 0
-    def drive(self, hours):
-        auto.trip = auto.trip + (hours * auto.currentSpeed)
-
-
-autot = []
-for i in range(1, 11):
-    auto = Auto("ABC-" + str(i), random.randint(100,200))
-    autot.append(auto)
-
-
 
 auto = Auto("ABC-123", 142)
-
-auto.accelerate(30)
-auto.accelerate(70)
-auto.accelerate(50)
-auto.accelerate(-200)
-auto.accelerate(60)
-auto.drive(1.5)
-
-
-
-
-#print(f"Auton rekisteritunnus: {auto.rekkari}, Auton huippunopeus: {auto.topSpeed} km/h, Auton tämän hetkinen nopeus: {auto.currentSpeed} km/h, Kuljettu matka: {auto.trip} kilometriä")
-
-while True:
-    for auto in autot:
-        auto.accelerate(random.randint(-10,15))
-        auto.drive(1)
-        if auto.trip >= 1000:
-            auto.rekkari = auto.rekkari + " (VOITTAJA!) "
-            break
-    else:
-        continue
-    break
-
-
-for auto in autot:
-    print(f"{auto.rekkari}, {auto.topSpeed} km/h, {auto.currentSpeed} km/h, {auto.trip} kilometriä")
-
-
-
-
-
-
-
-
+print(f"Auton rekisteritunnus: {auto.rekkari}, Auton huippunopeus: {auto.topSpeed} km/h, Auton tämän hetkinen nopeus: {auto.currentSpeed} km/h, Kuljettu matka: {auto.trip} kilometriä")
