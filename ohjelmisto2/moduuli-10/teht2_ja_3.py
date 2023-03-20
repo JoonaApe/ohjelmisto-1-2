@@ -16,6 +16,7 @@ class Hissi:
         self.alin_kerros = alin_kerros
         self.ylin_kerros = ylin_kerros
         self.hissi_nro = hissi_nro
+
     def kerros_ylos(self):
         if self.kerros < self.ylin_kerros:
             self.kerros += 1
