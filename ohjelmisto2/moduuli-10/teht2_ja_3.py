@@ -38,11 +38,13 @@ class Talo:
         self.hissit = []
         for i in range(hissi_lkm):
             self.hissit.append(Hissi(alin_kerros,ylin_kerros,i+1))
+
     def aja_hissi(self,hissi_nro, uusi_kerros):
         hissi = self.hissit[hissi_nro -1]
         print(f"Hissi numero {hissi_nro} liikkuu nyt.")
         hissi.siirry_kerrokseen(uusi_kerros)
         print(f"Hissi numero {hissi_nro} on pysähtynyt.")
+
     def palohalytys(self):
         print("\nPALOHÄLYTYS! Kaikki hissit menevät alimpaan kerrokseen.")
         for hissi in self.hissit:
