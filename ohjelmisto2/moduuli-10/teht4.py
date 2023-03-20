@@ -28,14 +28,17 @@ class Auto:
         self.topSpeed = topSpeed
         self.currentSpeed = currentSpeed
         self.trip = trip
+
     def accelerate(self, speedDifference):
         self.currentSpeed = self.currentSpeed + speedDifference
         if self.currentSpeed > self.topSpeed:
             self.currentSpeed = self.topSpeed
         if self.currentSpeed < 0:
             self.currentSpeed = 0
+
     def drive(self, hours):
         self.trip = self.trip + (hours * self.currentSpeed)
+
 class Kilpailu:
     def __init__(self, nimi, distance_km, num):
         self.nimi = nimi
@@ -49,6 +52,7 @@ class Kilpailu:
         for auto in self.lista:
             auto.accelerate(random.randint(-10,15))
             auto.drive(1)
+
     def tulosta_tilanne(self):
         for auto in self.lista:
             print(f"{auto.rekkari}, Huippunopeus: {auto.topSpeed} km/h, Nopeus: {auto.currentSpeed} km/h, Kokonaismatka: {auto.trip} kilometriä")
