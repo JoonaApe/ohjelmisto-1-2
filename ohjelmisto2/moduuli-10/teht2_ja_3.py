@@ -11,7 +11,7 @@ joka käskee kaikki hissit pohjakerrokseen. Jatka pääohjelmaa siten, että tal
 '''
 
 class Hissi:
-    def __init__(self, alin_kerros, ylin_kerros, hissi_nro = 0): #lisätty hissi_nro jotta palohälytys metodi saa sen.
+    def __init__(self, alin_kerros, ylin_kerros, hissi_nro = 0):
         self.kerros = alin_kerros
         self.alin_kerros = alin_kerros
         self.ylin_kerros = ylin_kerros
@@ -43,7 +43,6 @@ class Talo:
         print(f"Hissi numero {hissi_nro} liikkuu nyt.")
         hissi.siirry_kerrokseen(uusi_kerros)
         print(f"Hissi numero {hissi_nro} on pysähtynyt.")
-    #hieman paranneltu versio omaksi ilokseni.
     def palohalytys(self):
         print("\nPALOHÄLYTYS! Kaikki hissit menevät alimpaan kerrokseen.")
         for hissi in self.hissit:
