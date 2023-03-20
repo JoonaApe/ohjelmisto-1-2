@@ -21,7 +21,6 @@ kun kilpailu on päättynyt.
 '''
 
 import random
-from prettytable import PrettyTable
 
 class Auto:
     def __init__(self, rekkari, topSpeed , currentSpeed = 0, trip = 0):
