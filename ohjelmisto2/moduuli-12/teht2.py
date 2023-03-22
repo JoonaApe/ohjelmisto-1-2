@@ -1,4 +1,3 @@
-
 import requests
 
 hakusana = input("Anna hakusana: ")
@@ -10,11 +9,10 @@ try:
     vastaus = requests.get(pyyntö)
     if vastaus.status_code==200:
         json_vastaus = vastaus.json()
-    print(f"Sijainnin {hakusana} lämpötila: {json_vastaus['main']['temp']} °C")
-    print(f"Sään kuvaus: {json_vastaus['weather'][0]['description']}")
+        print(f"Sijainnin {hakusana} lämpötila: {json_vastaus['main']['temp']} °C")
+        print(f"Sään kuvaus: {json_vastaus['weather'][0]['description']}")
+    if vastaus.status_code==404:
+        print("Sijaintia ei löytynyt.")
 
 except requests.exceptions.RequestException as e:
     print ("Hakua ei voitu suorittaa.")
-
-
-
