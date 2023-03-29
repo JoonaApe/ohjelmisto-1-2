@@ -29,6 +29,7 @@ def alkuluku(num):
             "Number" : num,
             "isPrime" : isPrime
         }
+
     except ValueError:
         tilakoodi = 400
         vastaus = {
@@ -46,6 +47,7 @@ def page_not_found(virhekoodi):
     }
     jsonvastaus = json.dumps(vastaus)
     return Response(response=jsonvastaus,status=404, mimetype="application/json")
+
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=3000)
