@@ -94,17 +94,16 @@ const picArray = [
 
 // add your code here
 
-const section = document.querySelector("section");
+// innerHtml tyylillä
+
+/* const section = document.querySelector("section");
 
 document.getElementsByTagName(picArray);
 
 for (let i = 0; i < 9; i++) {
-  picArray[i];
 
-  let htmlKoodi = `<article>
-            <header>
+  let htmlKoodi = `<article class="card">
                 <h2>${picArray[i].title}</h2>
-            </header>
             <figure>
                 <img src=${picArray[i].image.medium} alt="title">
                 <figcaption>${picArray[i].caption}</figcaption>
@@ -115,4 +114,35 @@ for (let i = 0; i < 9; i++) {
 
 
   section.innerHTML += htmlKoodi;
+} */
+
+//DOM tyylillä.
+
+const section = document.querySelector("section");
+
+
+for (let i = 0; i < 9; i++) {
+
+  const article = document.createElement("article");
+  const h2 = document.createElement("h2");
+  const figure = document.createElement("figure");
+  const img = document.createElement("img");
+  const figC = document.createElement("figcaption");
+  const p = document.createElement('p');
+
+  img.src = picArray[i].image.medium;
+  h2.innerText = picArray[i].title;
+  figC.innerText = picArray[i].caption;
+  p.innerText = picArray[i].description;
+
+  figure.appendChild(img);
+  figure.appendChild(h2);
+  figure.appendChild(figC);
+  article.appendChild(figure);
+  article.appendChild(p);
+  section.appendChild(article);
 }
+
+
+
+

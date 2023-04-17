@@ -14,3 +14,16 @@ const students = [
   },
 ];
 
+console.log(students[0].name,students[0].id);
+
+for (let i = 0; i < 3 ; i++) {
+  const target = document.getElementById('target');
+
+  const option = document.createElement('option');
+  option.value = students[i].id;
+  option.textContent = students[i].name;
+
+  target.appendChild(option);
+}
+
+
